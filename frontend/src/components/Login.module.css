@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Strona logowania zajmuje całą dostępną przestrzeń */
+  width: 100%;
+  background-color: #e8f5e9;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.label {
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.registerButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #2e7d32;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.registerButton:hover {
+  background-color: #ff9800;
+  transform: scale(1.05);
+}

@@ -1,0 +1,72 @@
+/* 🔥 Pasek statusu użytkownika */
+.statusBar {
+  width: 100%;
+  display: flex;
+  align-items: center; /* Wyśrodkowanie wertykalne */
+  justify-content: center; /* Wyśrodkowanie poziome */
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 🔥 Kolory paska w zależności od statusu */
+.loggedOut {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.loggedIn {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* 🔥 Kontener na przyciski */
+.buttonContainer {
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie poziome */
+  align-items: center; /* Wyśrodkowanie wertykalne */
+  gap: 15px; /* Większy odstęp między przyciskami */
+  margin-left: 20px; /* Odstęp od tekstu */
+}
+
+/* 🔥 Styl dla przycisków "Zaloguj" i "Zarejestruj się" */
+.authButton {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  background-color: #4caf50; /* Ten sam styl co przycisk "Dołącz" */
+  color: white;
+}
+
+.authButton:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* 🔥 Styl dla przycisku "Wyloguj" */
+.logoutButton {
+  margin-left: 15px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  background-color: white;
+  color: #d32f2f;
+}
+
+.logoutButton:hover {
+  background-color: #f8d7da;
+  transform: scale(1.05);
+}
+
+strong {
+  margin-left: 5px;
+}

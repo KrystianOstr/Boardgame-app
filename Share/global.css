@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* === Globalne style dla formularzy === */
+.input {
+  /* width: 100%; */
+  padding: 12px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border: 2px solid #2e7d32;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(46, 125, 50, 0.3);
+}
+
+/* === Globalne style dla przycisków === */
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #388e3c;
+  transform: scale(1.03);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* === Globalne style dla nagłówków === */
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* === Style tła dla stron === */
+
+/* Cała aplikacja zajmuje pełne 100vh */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* width: 100vw; */
+}
+
+/* Header zajmuje tylko swoją wysokość */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+/* Reszta strony zajmuje całą dostępną przestrzeń */
+.page-content {
+  flex-grow: 1; /* Strona zajmuje resztę ekranu */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8f5e9;
+}
+
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e8f5e9; /* Jasny zielony */
+}
+
+/* === Karta formularza === */
+.form-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
