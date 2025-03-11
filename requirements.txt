@@ -1,5 +1,6 @@
 flask
 flask-bcrypt
+flask_login
 flask-cors
 flask-sqlalchemy
 flask-migrate
