@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "../components/Home.module.css"; // Import CSS Modules
+console.log("✅ Home component załadowany!");
 
 const Home = () => {
+  console.log("Styles in Home.jsx:", styles);
+  console.log("✅ Home component załadowany!");
+
   return (
     <div className={styles.container}>
       <div className={styles.contentbox}>

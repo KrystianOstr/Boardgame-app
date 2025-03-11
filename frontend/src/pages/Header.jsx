@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className={styles.header} onClick={() => navigate("/")}>
       <img
-        src="/public/logo-podwawelskie.jpeg"
+        src="/logo-podwawelskie.jpeg"
         alt="Podwawelskie planszówki logo"
         className={styles.logo}
       />
