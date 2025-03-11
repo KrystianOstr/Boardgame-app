@@ -37,7 +37,7 @@ const AddGame = () => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/search_game?name=${value}`
+        `${import.meta.env.VITE_BACKEND_URL}/search_game?name=${value}`
       );
       const data = await response.json();
 
@@ -124,14 +124,17 @@ const AddGame = () => {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/tables", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/tables`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 

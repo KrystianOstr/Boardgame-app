@@ -10,7 +10,7 @@ const GameTables = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/tables")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/tables`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Dane pobrane: ", data);
@@ -40,7 +40,7 @@ const GameTables = () => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/tables/${tableId}/join`,
+        `${import.meta.env.VITE_BACKEND_URL}/tables/${tableId}/join`,
         {
           method: "POST",
           headers: {
@@ -56,7 +56,7 @@ const GameTables = () => {
         return;
       }
 
-      fetch("http://127.0.0.1:5000/tables")
+      fetch(`${import.meta.env.VITE_BACKEND_URL}/tables`)
         .then((response) => response.json())
         .then((data) => setTables(data))
         .catch((error) => console.error("Błąd pobierania stołów:", error));
@@ -73,7 +73,7 @@ const GameTables = () => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/tables/${tableId}/leave`,
+        `${import.meta.env.VITE_BACKEND_URL}/tables/${tableId}/leave`,
         {
           method: "DELETE",
           headers: {
@@ -110,7 +110,7 @@ const GameTables = () => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/tables/${tableToDelete}`,
+        `${import.meta.env.VITE_BACKEND_URL}/tables/${tableToDelete}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
